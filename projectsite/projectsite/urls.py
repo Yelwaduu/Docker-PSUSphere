@@ -30,6 +30,7 @@ urlpatterns = [
     # Starts the website in log in page - Emman
   
     path("admin/", admin.site.urls),
+    path("api/", include('api.urls')),
     path("accounts/", include("allauth.urls")), #allauth routes
     path("", HomePageView.as_view(), name="home"),
     path('organization_list', OrganizationList.as_view(), name='organization-list'),
@@ -50,7 +51,7 @@ urlpatterns = [
     path('student_list/<pk>/delete', StudentDeleteView.as_view(), name='student-delete'),
 
     #College
-    path('college_list', CollegeList.as_view(), name='college-list'),
+    path('college_list', CollegeList.as_view(), name='college-list'), 
     path('college_list/add', CollegeCreateView.as_view(), name='college-add'),
     path('college_list/<pk>', CollegeUpdateView.as_view(), name='college-update'),
     path('college_list/<pk>/delete', CollegeDeleteView.as_view(), name='college-delete'),
