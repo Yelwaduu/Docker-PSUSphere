@@ -59,7 +59,7 @@ urlpatterns = [
     #Program
      path('program_list', ProgramList.as_view(), name='program-list'),
      path('program_list/add', ProgramCreateView.as_view(), name='program-add'),
-        path('program_list/<pk>', ProgramUpdateView.as_view(), name='program-update'),
-        path('program_list/<pk>/delete', ProgramDeleteView.as_view(), name='program-delete'),
+    path('program_list/<pk>', ProgramUpdateView.as_view(), name='program-update'),
+    path('program_list/<pk>/delete', ProgramDeleteView.as_view(), name='program-delete'),
 ]   
 
